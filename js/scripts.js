@@ -22,6 +22,31 @@ for(i = 0; i < indexArray.length; i++) {
 }
 console.log(multiArray);
 
+// takes smaller loop and adds it first into a 2d array
+
+var indexArray = ["First Item In Array", "Second Item In Array", "Third Item In Array", "Fourth Item In Array", "Fifth Item In Array", "Sixth Item In Array"];
+var idStrings = ["forLoops", "forEach", "whileLoops"];
+var multiArray = [];
+var count = 0;
+
+// if count gets to 2 then reset array2
+for(i = 0; i < idStrings.length; i++) {
+	for(k = 0; k < indexArray.length; k++) {
+    multiArray.push([idStrings[i], indexArray[k]]);
+    count++; // increases each loop
+
+    // this will run when the loop has cycled..
+    // through every item in the second array
+    if (count === indexArray.length) {
+      // this will run when 1st for loop has looped equal to 1st array
+      if (i == idStrings.length) {
+        k = 0; // reset 2nd for loop
+    	}
+  	}
+  }
+}
+console.log(multiArray);
+
 // Working 1d to 2d for loop for equal size
 var array1 = ["one", "two", "three"];
 var array2 = ["toOne", "toTwo", "toThree"];
